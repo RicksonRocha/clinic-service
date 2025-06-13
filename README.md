@@ -64,6 +64,7 @@ npm run start:dev
 - **Pets:** CRUD via REST padrão (ex: `GET /pets`, `POST /pets`, etc.)
 
 _Documentação Swagger pode ser adicionada para esses endpoints REST_
+![Swagger API Documentation](./docs/swagger.png)
 
 ---
 
