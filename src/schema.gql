@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Appointment {
+  date: DateTime!
+  id: ID!
+  ownerId: ID!
+  petId: ID!
+  status: String!
+}
+
+input CreateAppointmentInput {
+  date: DateTime!
+  ownerId: Float!
+  petId: Float!
+  status: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  createAppointment(createAppointmentInput: CreateAppointmentInput!): Appointment!
+  removeAppointment(id: Int!): Appointment!
+  updateAppointment(updateAppointmentInput: UpdateAppointmentInput!): Appointment!
+}
+
+type Query {
+  appointment(id: Int!): Appointment!
+  appointments: [Appointment!]!
+}
+
+input UpdateAppointmentInput {
+  date: DateTime
+  id: Int!
+  ownerId: Float
+  petId: Float
+  status: String
+}
